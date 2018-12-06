@@ -1,2 +1,8 @@
-./venv
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# Environment
+venv/
+
+# Secret keys and tokens
 keys_tokens.py

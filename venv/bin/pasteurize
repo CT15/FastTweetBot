@@ -1,4 +1,4 @@
-#!/Users/calvintantio/Desktop/venv/bin/python3
+#!/Users/calvintantio/Desktop/FastTweetBot/venv/bin/python3
 # EASY-INSTALL-ENTRY-SCRIPT: 'future==0.17.1','console_scripts','pasteurize'
 __requires__ = 'future==0.17.1'
 import re
