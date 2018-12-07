@@ -1,6 +1,3 @@
-touch keys_tokens.py
-touch telegram_id.py
-
 cat > ./keys_tokens.py <<EOL
 # Telegram
 BOT_TOKEN = 'Your Telegram bot token'
@@ -12,7 +9,7 @@ TW_ACCESS_TOKEN = 'Your Twitter Access Token'
 TW_ACCESS_TOKEN_SECRET = 'Your Twitter Access Token Secret'
 EOL
 
-cat > ./telegram.py <<EOL
+cat > ./telegram_id.py <<EOL
 id = 'Your telegram ID'
 EOL
 
