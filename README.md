@@ -8,9 +8,10 @@ This application is powered by [tweepy](https://github.com/tweepy/tweepy) and
 [python-telegram-bot](https://github.com/python-telegram-bot/python-telegram-bot).
 
 My @FastTweetBot is run continuously from
-[PythonAnywhere](https://www.pythonanywhere.com/). It will not work for you
-because you are not the owner of the bot. You can, however, create your own
-by following the steps given below.
+[PythonAnywhere](https://www.pythonanywhere.com/). You can find it by searching
+`Fast Tweet Bot` in Telegram. You try the bot but you will not be able to Tweet
+anything because you are not the owner of the bot. Don't worry! You can create
+your own by following the steps given below.
 
 ## Setting up
 
