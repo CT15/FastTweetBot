@@ -1,4 +1,6 @@
 import logging
+import telegram_id
+
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackQueryHandler
 from keys_tokens import BOT_TOKEN
@@ -13,7 +15,15 @@ logger = logging.getLogger(__name__)
 is_creating_tweet = False
 saved_tweet = None
 
+def id_matches(id):
+    no_match_message = 'Sorry, you are not the intended user of this bot.'
+    return (telegram_id.id != id, no_match_message)
+
+
 def start(bot, update):
+    if not id_matches(update.message.from_user.id):
+        return
+
     start_message = ('Hi there! Welcome to Fast Tweet Bot, '
                     'a bot that helps you to tweet content '
                     'on your Tweeter account. Try the /help '
@@ -23,6 +33,9 @@ def start(bot, update):
 
 
 def help(bot, update):
+    if not id_matches(update.message.from_user.id):
+        return
+
     help_message = ('You can control me by sending these commands:\n'
                     '/create - create and save a new Tweet\n'
                     '/tweet - post a saved Tweet to Twitter\n'
@@ -33,6 +46,9 @@ def help(bot, update):
 def check_is_creating_tweet(update):
     global is_creating_tweet
 
+    if not id_matches(update.message.from_user.id):
+        return
+
     if is_creating_tweet:
         update.message.reply_text('Abort creating new Tweet.')
         is_creating_tweet = False
@@ -40,12 +56,19 @@ def check_is_creating_tweet(update):
 
 def create(bot, update):
     global is_creating_tweet
+
+    if not id_matches(update.message.from_user.id):
+        return
+
     is_creating_tweet = True
     update.message.reply_text('You can start creating your Tweet now ...')
 
 
 def tweet(bot, update):
     global saved_tweet
+
+    if not id_matches(update.message.from_user.id):
+        return
 
     check_is_creating_tweet(update)
 
@@ -69,6 +92,9 @@ def tweet(bot, update):
 def confirm_tweet(bot, update):
     global saved_tweet
 
+    if not id_matches(update.message.from_user.id):
+        return
+
     query = update.callback_query
     confirm_message = ('Tweeted successfully! Saved Tweet is cleared.')
     cancel_message = ('Cancel Tweeting. '
@@ -89,6 +115,9 @@ def confirm_tweet(bot, update):
 def saved(bot, update):
     global saved_tweet
 
+    if not id_matches(update.message.from_user.id):
+        return
+
     check_is_creating_tweet(update)
 
     if saved_tweet is not None:
@@ -104,6 +133,9 @@ def saved(bot, update):
 def create_tweet(bot, update):
     global is_creating_tweet
     global saved_tweet
+
+    if not id_matches(update.message.from_user.id):
+        return
 
     if not is_creating_tweet:
         fail_message = ('Are you trying to create a Tweet? Use the /create '
