@@ -4,5 +4,6 @@ __pycache__/
 # Environment
 venv/
 
-# Secret keys and tokens
+# Secret
 keys_tokens.py
+telegram_id.py
