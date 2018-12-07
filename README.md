@@ -5,7 +5,12 @@ access Twitter. This is a personalised bot as the bot is only allowed to post
 on behalf of the bot owner.
 
 This application is powered by [tweepy](https://github.com/tweepy/tweepy) and
-[python-telegram-bot](https://github.com/python-telegram-bot/python-telegram-bot)
+[python-telegram-bot](https://github.com/python-telegram-bot/python-telegram-bot).
+
+My @FastTweetBot is run continuously from
+[PythonAnywhere](https://www.pythonanywhere.com/). It will not work for you
+because you are not the owner of the bot. You can, however, create your own
+by following the steps given below.
 
 ## Setting up
 
@@ -22,7 +27,7 @@ talked to the BotFather.
   ```shell
   $ python3 -m venv venv
   $ source venv/bin/activate # Make sure that `python --version` is 3.x.x
-  ```
+  ``
 4. Install dependencies
   ```shell
   $ pip install -r requirements.txt
