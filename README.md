@@ -4,7 +4,13 @@ A Telegram bot that helps you update your Twitter status without having to
 access Twitter. This is a personalised bot as the bot is only allowed to post
 on behalf of the bot owner.
 
+This application is powered by [tweepy](https://github.com/tweepy/tweepy) and
+[python-telegram-bot](https://github.com/python-telegram-bot/python-telegram-bot)
+
 ## Setting up
+
+We assume that you already have created a Twitter developer account and have
+talked to the BotFather.
 
 1. Make sure that you have **Python 3**, **pip** and **Python virtual environment** installed
 2. Run the following commands
