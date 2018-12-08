@@ -28,7 +28,7 @@ talked to the BotFather.
   ```shell
   $ python3 -m venv venv
   $ source venv/bin/activate # Make sure that `python --version` is 3.x.x
-  ``
+  ```
 4. Install dependencies
   ```shell
   $ pip install -r requirements.txt
