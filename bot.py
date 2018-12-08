@@ -18,7 +18,7 @@ saved_tweet = None
 def start(bot, update):
     start_message = ('Hi there! Welcome to Fast Tweet Bot, '
                     'a bot that helps you to tweet content '
-                    'on your Tweeter account. Try the /help '
+                    'on your Twitter account. Try the /help '
                     'command to see all available commands.')
 
     update.message.reply_text(start_message)
